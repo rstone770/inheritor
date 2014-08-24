@@ -1,0 +1,29 @@
+{
+  "name": "coffee-boilerplate",
+  "version": "0.1.0",
+  "description": "A basic library boiler plate for coffee-script projects.",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "gulp spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rstone770/coffee-boilerplate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rstone770/coffee-boilerplate/issues"
+  },
+  "homepage": "https://github.com/rstone770/coffee-boilerplate",
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "glob": "^4.0.5",
+    "gulp": "^3.8.7",
+    "gulp-coffee": "^2.1.2",
+    "gulp-coffeelint": "^0.3.4",
+    "gulp-mocha": "^1.0.0",
+    "gutil": "^1.5.0",
+    "underscore": "^1.6.0"
+  }
+}
