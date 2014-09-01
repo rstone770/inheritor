@@ -1,5 +1,4 @@
 # Inheritor [![Build Status](https://travis-ci.org/rstone770/inheritor.svg?branch=master)](https://travis-ci.org/rstone770/inheritor) [![NPM version](http://img.shields.io/npm/v/inheritor.svg)](http://img.shields.io/npm/v/inheritor.svg)
-====
 
 Plain and simple, Inheritor is an inheritance library that emulates the inheritance pattern of backbone extend. This library functions 
 
