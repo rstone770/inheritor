@@ -1,7 +1,9 @@
 module.exports =
 
+  pkg: require "#{process.cwd()}/package.json"
+
   default:
-    deps: ['coffee']
+    deps: ['build']
 
   spec:
     paths: ["#{process.cwd()}/spec/specs/**/*.coffee"]
@@ -9,15 +11,16 @@ module.exports =
     options:
       reporter: 'dot'
 
-  coffee:
-    paths: ["#{process.cwd()}/src/**/*.coffee"]
+  lint:
+    paths: ["#{process.cwd()}/{src,tasks,spec}/**/*.coffee"]
 
-    options:
-      bare: true
+  build:
+    paths: ["#{process.cwd()}/src/index.coffee"]
 
     deps: ['lint', 'spec']
 
-    out: "#{process.cwd()}/bin"
+    exports: 'inherits'
 
-  lint:
-    paths: ["#{process.cwd()}/{src,tasks,spec}/**/*.coffee"]
+    out:
+      dir: "#{process.cwd()}/bin"
+      name: 'inherits.min.js'
