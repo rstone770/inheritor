@@ -1,4 +1,4 @@
-# Inherits
+# Inherits [![Build Status](https://travis-ci.org/rstone770/inherits.svg?branch=master)](https://travis-ci.org/rstone770/inherits)
 ====
 
 Plain and simple, Inherits is an inheritance library that emulates the inheritance pattern of backbone extend. This library functions 
