@@ -1,27 +1,27 @@
-# Inherits [![Build Status](https://travis-ci.org/rstone770/inherits.svg?branch=master)](https://travis-ci.org/rstone770/inherits)
+# Inheritor [![Build Status](https://travis-ci.org/rstone770/inheritor.svg?branch=master)](https://travis-ci.org/rstone770/inheritor)
 ====
 
-Plain and simple, Inherits is an inheritance library that emulates the inheritance pattern of backbone extend. This library functions 
+Plain and simple, Inheritor is an inheritance library that emulates the inheritance pattern of backbone extend. This library functions 
 
 # Install
 npm install inheritor
 
 # Usage
-Inherits uses the UMD format so there are many ways of including the libary in your projects.
+Inheritor uses the UMD format so there are many ways of including the libary in your projects.
 
 Global
 ```html
-<script src="lib/bin/inherits.min.js"></script>
+<script src="lib/bin/inheritor.min.js"></script>
 <script>
-	alert(inherits.version);
+	alert(inheritor.version);
 </script>
 ```
 
 RequireJS
 ```javascript
 define([
-	'inherits'
-], function(inherits) {
+	'inheritor'
+], function(inheritor) {
 	alert(inerits.version);
 });
 
@@ -29,7 +29,7 @@ define([
 
 Node / CommonJS
 ```javascript
-inherits = require('inherits');
+inheritor = require('inheritor');
 ```
 
 After the library has been loaded, usage is pretty straight forward.
@@ -37,13 +37,13 @@ After the library has been loaded, usage is pretty straight forward.
 ```javascript
 Emitter = require('events').EventEmmitter
 
-MyEmitter = inherits.from(Emitter, {
+MyEmitter = inheritor.from(Emitter, {
 	someMethod: function() {
 		console.log('MyEmitter Says Hi!');
 	}	
 });
 
-MyEmitter.extend = inherits.extend;
+MyEmitter.extend = inheritor.extend;
 
 SubClassMyEmitter = MyEmitter.extend({
 	someMethod: function() {
@@ -73,7 +73,7 @@ Person.prototype = {
 	}
 };
 
-Employee = inherits.from(Person, {
+Employee = inheritor.from(Person, {
 	work: function() {
 		console.log(this.getName() + ' is doing work.');
 	}
@@ -98,7 +98,7 @@ Person = function(name) {
 	this.name = name;
 }
 
-Person.extend = inherits.extend;
+Person.extend = inheritor.extend;
 
 Person.prototype = {
 	getName: function() {

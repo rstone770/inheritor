@@ -1,21 +1,21 @@
 {
-  "name": "inherits",
+  "name": "inheritor",
   "version": "0.1.0",
   "description": "A js inheritance library.",
-  "main": "./bin/inherits.min.js",
+  "main": "./bin/inheritor.min.js",
   "scripts": {
     "test": "gulp spec"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rstone770/inherits.git"
+    "url": "git://github.com/rstone770/inheritor.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rstone770/inherits/issues"
+    "url": "https://github.com/rstone770/inheritor/issues"
   },
-  "homepage": "https://github.com/rstone770/inherits",
+  "homepage": "https://github.com/rstone770/inheritor",
   "devDependencies": {
     "chai": "^1.9.1",
     "coffee-script": "^1.7.1",

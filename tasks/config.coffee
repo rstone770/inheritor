@@ -19,8 +19,8 @@ module.exports =
 
     deps: ['lint', 'spec']
 
-    exports: 'inherits'
+    exports: 'inheritor'
 
     out:
       dir: "#{process.cwd()}/bin"
-      name: 'inherits.min.js'
+      name: 'inheritor.min.js'
