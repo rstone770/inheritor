@@ -1,10 +1,12 @@
-# Inheritor [![Build Status](https://travis-ci.org/rstone770/inheritor.svg?branch=master)](https://travis-ci.org/rstone770/inheritor)
+# Inheritor [![Build Status](https://travis-ci.org/rstone770/inheritor.svg?branch=master)](https://travis-ci.org/rstone770/inheritor) [![NPM version](http://img.shields.io/npm/v/inheritor.svg)](http://img.shields.io/npm/v/inheritor.svg)
 ====
 
 Plain and simple, Inheritor is an inheritance library that emulates the inheritance pattern of backbone extend. This library functions 
 
 # Install
+```
 npm install inheritor
+```
 
 # Usage
 Inheritor uses the UMD format so there are many ways of including the libary in your projects.
