@@ -1,6 +1,6 @@
 {
   "name": "inherits",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A js inheritance library.",
   "main": "./bin/inherits.min.js",
   "scripts": {

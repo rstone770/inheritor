@@ -4,7 +4,7 @@
 Plain and simple, Inherits is an inheritance library that emulates the inheritance pattern of backbone extend. This library functions 
 
 # Install
-Add npm handle
+npm install inheritor
 
 # Usage
 Inherits uses the UMD format so there are many ways of including the libary in your projects.
