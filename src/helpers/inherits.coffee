@@ -8,9 +8,11 @@ module.exports = (parent, prototype = {}, statics = {}) ->
     else
       () -> parent.apply @, arguments
 
-  extend constructor, parent, statics,
-    __super: parent.prototype
+  constructor:: = Object.create parent::
 
-  extend constructor.prototype, parent.prototype, prototype
+  extend constructor, parent, statics,
+    __super: parent::
+
+  extend constructor::, prototype
 
   constructor

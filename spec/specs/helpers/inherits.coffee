@@ -19,6 +19,14 @@ describe 'helpers/inherits', ->
     inherits(bare, {}).should.be.a.function
     inherits(bare, {}, {}).should.be.a.function
 
+  it 'should be instance of base.', ->
+    Klass = inherits withPrototype,
+      method: () ->
+    
+    klass = new Klass
+
+    klass.should.be.instanceOf withPrototype
+
   it 'should use the parent constructor if one is not overridden.', ->
     Klass = inherits fixture 'constructor'
 
