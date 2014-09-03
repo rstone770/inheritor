@@ -1,10 +1,11 @@
-# Inheritor [![Build Status](https://travis-ci.org/rstone770/inheritor.svg?branch=master)](https://travis-ci.org/rstone770/inheritor)
-====
+# Inheritor [![Build Status](https://travis-ci.org/rstone770/inheritor.svg?branch=master)](https://travis-ci.org/rstone770/inheritor) [![NPM version](http://img.shields.io/npm/v/inheritor.svg)](http://img.shields.io/npm/v/inheritor.svg)
 
 Plain and simple, Inheritor is an inheritance library that emulates the inheritance pattern of backbone extend. This library functions 
 
 # Install
+```
 npm install inheritor
+```
 
 # Usage
 Inheritor uses the UMD format so there are many ways of including the libary in your projects.
@@ -13,16 +14,16 @@ Global
 ```html
 <script src="lib/bin/inheritor.min.js"></script>
 <script>
-	alert(inheritor.version);
+  alert(inheritor.version);
 </script>
 ```
 
 RequireJS
 ```javascript
 define([
-	'inheritor'
+  'inheritor'
 ], function(inheritor) {
-	alert(inerits.version);
+  alert(inerits.version);
 });
 
 ```
@@ -38,19 +39,19 @@ After the library has been loaded, usage is pretty straight forward.
 Emitter = require('events').EventEmmitter
 
 MyEmitter = inheritor.from(Emitter, {
-	someMethod: function() {
-		console.log('MyEmitter Says Hi!');
-	}	
+  someMethod: function() {
+    console.log('MyEmitter Says Hi!');
+  } 
 });
 
 MyEmitter.extend = inheritor.extend;
 
 SubClassMyEmitter = MyEmitter.extend({
-	someMethod: function() {
-		console.log('SubClassMyEmitter Says Hi!');
+  someMethod: function() {
+    console.log('SubClassMyEmitter Says Hi!');
 
-		SubClassMyEmitter.__super.someMethod.call(this);
-	}
+    SubClassMyEmitter.__super.someMethod.call(this);
+  }
 });
 
 ```
@@ -64,30 +65,35 @@ This method will extend a source object by copying its prototype and merging it 
 
 ```javascript
 Person = function(name) {
-	this.name = name;
+  this.name = name;
 }
 
 Person.prototype = {
-	getName: function() {
-		return this.name; 
-	}
+  getName: function() {
+    return this.name; 
+  }
 };
 
 Employee = inheritor.from(Person, {
-	work: function() {
-		console.log(this.getName() + ' is doing work.');
-	}
+  work: function() {
+    console.log(this.getName() + ' is doing work.');
+  }
 }, {
-	create: function() {
-		var instance = Object.create(this.prototype);
+  create: function() {
+    var instance = Object.create(this.prototype);
 
-		instance.constructor.apply(instance, arguments);
+    instance.constructor.apply(instance, arguments);
 
-		return instance
-	}
+    return instance
+  }
 });
 
-Bob = Employee.create('bob').work(); // bob is doing work.
+Employee.create('bob').work(); // bob is doing work.
+
+john = Employee.create('john');
+
+john.instanceof Employee // true
+john.instanceof Person // true
 ```
 
 ## extend([prototype [, static]])
@@ -95,36 +101,42 @@ Exactly the same as **from** except that the source is this. This allows you to 
 
 ```javascript
 Person = function(name) {
-	this.name = name;
+  this.name = name;
 }
 
 Person.extend = inheritor.extend;
 
 Person.prototype = {
-	getName: function() {
-		return this.name; 
-	}
+  getName: function() {
+    return this.name; 
+  }
 };
 
 Employee = Person.extend({
-	work: function() {
-		console.log(this.getName() + ' is doing work.');
-	}
+  work: function() {
+    console.log(this.getName() + ' is doing work.');
+  }
 }, {
-	create: function() {
-		var instance = Object.create(this.prototype);
+  create: function() {
+    var instance = Object.create(this.prototype);
 
-		instance.constructor.apply(instance, arguments);
+    instance.constructor.apply(instance, arguments);
 
-		return instance
-	}
+    return instance
+  }
 });
 
 EmployeeSubClass = Employee.extend({
-	// more stuff
+  // more stuff
 });
 
-Bob = EmployeeSubClass.create('bob').work(); // bob is doing work.
+bob = EmployeeSubClass.create('bob').work(); // bob is doing work.
+
+john = EmployeeSubClass.create('john');
+
+john instanceof EmployeeSubClass // true
+john instanceof Employee // true
+john instanceof Person // true
 ```
 
 # Building
@@ -133,3 +145,7 @@ To build the project checkout out the repository and simply use npm install and 
 npm install
 gulp
 ```
+
+# Links
+[**Changelog**](CHANGELOG.MD)  
+[**License**](LICENSE)  
