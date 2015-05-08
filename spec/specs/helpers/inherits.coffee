@@ -1,7 +1,6 @@
-do require('chai').should
+require('chai').should()
 
 fixture  = require "#{process.cwd()}/spec/fixtures/helpers/klass"
-
 inherits = require "#{process.cwd()}/src/helpers/inherits"
 
 describe 'helpers/inherits', ->

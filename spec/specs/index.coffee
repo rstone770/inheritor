@@ -1,8 +1,8 @@
-do require('chai').should
+require('chai').should()
 
 fixutre  = require "#{process.cwd()}/spec/fixtures/helpers/klass"
-
 index    = require "#{process.cwd()}/src/index"
+extend   = require "#{process.cwd()}/src/helpers/extend"
 inherits = require "#{process.cwd()}/src/helpers/inherits"
 
 describe 'index', ->
@@ -29,3 +29,8 @@ describe 'index', ->
   describe 'from', ->
     it 'should export inherits.', ->
       index.should.have.property 'from', inherits
+
+  describe 'mixin', ->
+    it 'should export extend.', ->
+      index.should.have.property 'mixin', extend
+

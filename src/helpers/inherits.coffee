@@ -5,8 +5,10 @@ module.exports = (parent, prototype = {}, statics = {}) ->
   constructor =
     if Object.hasOwnProperty.call prototype, 'constructor'
       prototype.constructor
-    else
+    else if typeof parent is 'function'
       () -> parent.apply @, arguments
+    else
+      () ->
 
   constructor:: = Object.create parent::
 

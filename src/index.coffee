@@ -1,4 +1,5 @@
 inherits = require './helpers/inherits'
+extend = require './helpers/extend'
 
 api =
 
@@ -8,5 +9,7 @@ api =
     api.from @, prototype, statics
 
   from: inherits
+
+  mixin: extend
 
 module.exports = api
